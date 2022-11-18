@@ -1,0 +1,29 @@
+{% extends "./base.html" %}
+{% load static %}
+{% block content %}
+   <h1>Sign up/ Register</h1>
+   <form method ="post" action="">
+    {% csrf_token %}
+    <span>
+        <label for="username">username</label>
+        <input type="text" name="username" placeholder="username">
+    </span>
+        
+    <span>
+        <label for="password">password</label>
+        <input type="password" name="password" placeholder="password">
+    </span>
+        
+    {% for message in messages %}
+        <span>{{message}}</span>
+    {% endfor %}
+        <input type="submit" value="Login">
+   </form> 
+        <span>
+            don't have an account?
+            <a href={% url "signUpPage" %}>signup</a> 
+        </span>
+{% endblock %}
+{% block styles %}
+   <link rel="stylesheet" href={% static 'css/signup.css' %}>
+{% endblock %}

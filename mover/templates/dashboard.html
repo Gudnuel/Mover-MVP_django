@@ -1,0 +1,12 @@
+{% extends "./base.html" %}
+{% load static %}
+{% block content %}
+   <h1>App dashboard</h1>
+<span>
+    hello {{request.user}}
+    <a href={% url 'logoutUser' %}>logout</a>
+</span>
+{% endblock %}
+{% block styles %}
+   <link rel="stylesheet" href={% static 'css/signup.css' %}>
+{% endblock %}

@@ -1,0 +1,19 @@
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    /* background: yellow; */
+    width: 50%;
+    height: 50vh;
+}
+
+form>span{
+    width: 50%;
+    /* background: aliceblue; */
+    height: 7vh;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+}

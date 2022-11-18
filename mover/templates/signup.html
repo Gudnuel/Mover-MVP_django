@@ -1,0 +1,36 @@
+{% extends "./base.html" %}
+{% load static %}
+{% block content %}
+   <h1>Sign up/ Register</h1>
+   <form method ="post" action="">
+    {% csrf_token %}
+    <span>
+        {{form.username.label}}
+        {{form.username}}
+    </span>
+        
+    <span>
+        {{form.email.label}}
+        {{form.email}}
+    </span>
+        
+    <span>
+        {{form.password1.label}}
+        {{form.password1}}
+    </span>
+        
+    <span>
+        {{form.password2.label}}
+        {{form.password2}}
+    </span>
+        {{form.errors}}
+        <input type="submit" value="submit">
+   </form> 
+        <span>
+            already have an account?
+            <a href={% url "loginPage" %}>login</a> 
+        </span>
+{% endblock %}
+{% block styles %}
+   <link rel="stylesheet" href={% static 'css/signup.css' %}>
+{% endblock %}
